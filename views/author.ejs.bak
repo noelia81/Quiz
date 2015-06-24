@@ -6,7 +6,7 @@
   </head>
   <body>
     Autora: <p><%= autora %> <br> </p>
-    <IMG SRC="C:\Program Files (x86)\nodejs\quiz\views\noe.gif" WIDTH=178 HEIGHT=180 BORDER=2 ><br>
+    <img src="C:\Program Files (x86)\nodejs\quiz\views\noe.gif" WIDTH=178 HEIGHT=180 BORDER=2 ><br>
     <a href="/"> Volver<br><br></a>
   </body>
 </html>
