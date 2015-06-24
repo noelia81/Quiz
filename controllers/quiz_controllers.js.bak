@@ -5,7 +5,7 @@ res.render('quizes/question', {pregunta: 'Capital de Italia'});
 };
 
 //GET /quizes/answer
-export.answer = function(req, res){
+exports.answer = function(req, res){
 
 	if(req.query.respuesta === 'Roma'){
 		res.render('quizes/answer', {respuesta:'Correcto'});

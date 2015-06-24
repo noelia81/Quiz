@@ -13,3 +13,8 @@ exports.answer = function(req, res){
 		res.render('quizes/answer', {respuesta:'Incorrecto'});
 	}
 };
+
+exports.author = function (req, res){
+
+res.render('views/author', {respuesta: 'Autora<br><br>Noelia Ram&iacuterez<br>' <IMG SRC="C:\Program Files (x86)\nodejs\quiz\views" WIDTH=178 HEIGHT=180 BORDER=2>});
+};
