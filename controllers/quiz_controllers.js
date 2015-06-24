@@ -16,5 +16,5 @@ exports.answer = function(req, res){
 
 exports.author = function (req, res){
 
-res.render('author', {autora: 'Noelia Ram&iacuterez'});
+res.render('author', {autora: 'Noelia Ramirez'});
 };
