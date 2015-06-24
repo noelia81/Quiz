@@ -5,7 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    Autora: <p><%= autora %> </p>
+    Autora: <p><%= autora %> <br> </p>
+    <IMG SRC="C:\Program Files (x86)\nodejs\quiz\views" WIDTH=178 HEIGHT=180 BORDER=2>
     <a href="/"> Volver<br><br></a>
   </body>
 </html>
