@@ -7,8 +7,7 @@
   </head>
   <body>
     <h3>Bienvenido a <%= title %></h3>
-    <p>El portal donde podr&aacute crear sus propios juegos!</p>
+    <p>El portal donde podr&aacute crear sus propios juegos!<br></p>
     <p><a href="/quizes/question">Comience a jugar</a></p>
-    <p><a href="https://github.com/noelia81/Quiz">Proyecto en GitHub</a></p>
   </body>
 </html>
