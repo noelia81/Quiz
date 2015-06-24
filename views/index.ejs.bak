@@ -9,6 +9,6 @@
     <h3>Bienvenido a <%= title %></h3>
     <p>El portal donde podr&aacute crear sus propios juegos!</p>
     <p><a href="/quizes/question">Comience a jugar</a></p>
-    <p><b href="https://github.com/noelia81/Quiz">Proyecto en GitHub</b></p>
+    <b href="https://github.com/noelia81/Quiz">Proyecto en GitHub</b>
   </body>
 </html>
