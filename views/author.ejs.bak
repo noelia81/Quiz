@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h2>Autora<br><br>Noelia Ram&iacuterez</h2>
-    <IMG SRC="C:\Program Files (x86)\nodejs\quiz\views" WIDTH=178 HEIGHT=180 BORDER=2>
+    Aurtora: <p><%= autora %> </p>
+    
   </body>
 </html>
