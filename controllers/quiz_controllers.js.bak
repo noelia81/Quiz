@@ -16,5 +16,5 @@ exports.answer = function(req, res){
 
 exports.author = function (req, res){
 
-res.render('views/author', {respuesta: 'Autora<br><br>Noelia Ram&iacuterez<br>' + "C:\Program Files (x86)\nodejs\quiz\views\noe.jpg" });
+res.render('views/author', {respuesta: 'Autora<br><br>Noelia Ram&iacuterez<br>'});
 };
