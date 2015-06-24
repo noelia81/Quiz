@@ -7,6 +7,6 @@
   <body>
     <h2>Quiz: el juego de las preguntas</h2>
     <p><%= respuesta %> </p>
-    <a href="/quizes/question"> Intentelo otra vez<br></a>
+    <a href="/quizes/question"> Intentelo otra vez<br><br></a>
   </body>
 </html>
