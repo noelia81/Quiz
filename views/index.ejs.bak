@@ -1,9 +1,12 @@
+
+    
+    
+    
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    
+    <meta charset="utf-8"><title>Quiz</title>
+  
   </head>
   <body>
     <h3>Bienvenido a <%= title %></h3>
