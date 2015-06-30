@@ -1,16 +1,16 @@
 var path = require('path');
 
-//Postgres DATABASE_URL = postgres://user:passwd@host:port/database
-//SQLite   DATABASE_URL = sqlite://:@:/
+//Postgres DATABASE_url = postgres://user:passwd@host:port/database
+//SQLite   DATABASE_url = sqlite://:@:/
 
-var URL = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
-var DB_name = (URL[6]||null);
-var user = (URL[2]||null);
-var pwd = (URL[3]||null);
-var protocol = (URL[1]||null);
-var dialect = (URL[1]||null);
-var port = (URL[5]||null);
-var host = (URL[4]||null);
+var url = process.env.DATABASE_url.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
+var DB_name = (url[6]||null);
+var user = (url[2]||null);
+var pwd = (url[3]||null);
+var protocol = (url[1]||null);
+var dialect = (url[1]||null);
+var port = (url[5]||null);
+var host = (url[4]||null);
 var storage = process.env.DATABASE_STORAGE;
 
 //Cargar Modelo ORM
