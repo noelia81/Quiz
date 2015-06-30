@@ -5,13 +5,13 @@ var path = require('path');
 
 var URL = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
 var DB_name = (URL[6]||null);
-var user = (URL[6]||null);
-var pwd = (URL[6]||null);
-var protocol = (URL[6]||null);
-var dialect = (URL[6]||null);
-var port = (URL[6]||null);
-var host = (URL[6]||null);
-var storage = (URL[6]||null);
+var user = (URL[2]||null);
+var pwd = (URL[3]||null);
+var protocol = (URL[1]||null);
+var dialect = (URL[1]||null);
+var port = (URL[5]||null);
+var host = (URL[4]||null);
+var storage = process.env.DATABASE_STORAGE;
 
 //Cargar Modelo ORM
 var Sequelize = require ('sequelize');
