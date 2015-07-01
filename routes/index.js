@@ -3,9 +3,9 @@ var router = express.Router();
 var quizController = require('../controllers/quiz_controllers');
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Quiz' });
-});
+//router.get('/', function(req, res) {
+//  res.render('index', { title: 'Quiz' });
+//});
 
 
 //Antes de la BBDD
