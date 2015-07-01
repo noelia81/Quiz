@@ -51,7 +51,7 @@ exports.answer = function(req, res){
 // GET /quizes
 exports.index = function (req, res){
 	models.Quiz.findAll().success(function(quizes){
-		res.render('quizes/index.ejs', {quizes: quizes});
+		res.render('quizes/index.ejs', { quizes: quizes});
 	})
 };
 
