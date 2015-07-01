@@ -12,7 +12,7 @@ var models = require('../models/models.js');
 //con BBDD
 //get /quizes/question
 exports.show = function (req, res){
-	models.Quiz.find(req.params.quizId).then(function(quiz) {
+	models.Quiz.findById(req.params.quizId).then(function(quiz) {
 		res.render('quizes/show', { quiz: quiz});
 	})
 };
@@ -38,7 +38,7 @@ exports.show = function (req, res){
 //con BBDD
 //GET /quizes/answer
 exports.answer = function(req, res){
-	models.Quiz.find(req.params.quizId).then(function(quiz) {
+	models.Quiz.findById(req.params.quizId).then(function(quiz) {
 	 if(req.query.respuesta === quiz.respuesta){
 		res.render('quizes/answer', { quiz: quiz, respuesta: 'Correcto'});
 	}else{
