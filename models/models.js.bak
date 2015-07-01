@@ -18,7 +18,7 @@ var Sequelize = require ('sequelize');
 
 //Usar BBDD SQLite o Postgress
 
-var sequilize = new Sequelize (DB_name, user, pwd,
+var sequelize = new Sequelize (DB_name, user, pwd,
 	{ dialect: protocol,
 		protocol: protocol,
 		port: port,
