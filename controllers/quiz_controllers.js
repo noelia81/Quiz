@@ -11,7 +11,7 @@ var models = require('../models/models.js');
 
 //con BBDD
 //get /quizes/question
-Exports.show = function (req, res){
+exports.show = function (req, res){
 	models.Quiz.find(req.params.quizId).then(function(quiz) {
 		res.render('quizes/show', { quiz: quiz});
 	})
