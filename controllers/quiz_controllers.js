@@ -11,6 +11,22 @@ exports.load = function (req, res, next, quizId){
 	}).catch(function(error){next(error);});
 };
 
+
+//antes de BBDD
+//GET /quizes/question
+//Exports.question = function (req, res){
+//	models.Quiz.findAll().success(function(quiz) {
+//		res.render('quizes/question', { pregunta: quiz[0].pregunta})
+//	})
+// en versión sin BBDD: res.render('quizes/question', {pregunta: 'Capital de Italia'});
+//};
+
+//con BBDD
+//get /quizes/question
+exports.show = function (req, res){
+		res.render('quizes/show', { quiz: req.quiz});
+};
+
 // GET /quizes
 exports.index = function(req, res) {
 	 
@@ -34,20 +50,7 @@ exports.index = function(req, res) {
 
 
 
-//antes de BBDD
-//GET /quizes/question
-//Exports.question = function (req, res){
-//	models.Quiz.findAll().success(function(quiz) {
-//		res.render('quizes/question', { pregunta: quiz[0].pregunta})
-//	})
-// en versión sin BBDD: res.render('quizes/question', {pregunta: 'Capital de Italia'});
-//};
 
-//con BBDD
-//get /quizes/question
-exports.show = function (req, res){
-		res.render('quizes/show', { quiz: req.quiz});
-};
 
 //antes de BBDD
 //GET /quizes/answer
