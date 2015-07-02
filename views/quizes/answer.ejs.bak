@@ -2,7 +2,8 @@
 <html>
 
   <body>
-        <p><%= respuesta %> </p>
+        <p><%= respuesta %>
     <a href="/quizes/<%= quiz.id %>">Volver</a>
+    </p>
   </body>
 </html>
