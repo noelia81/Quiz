@@ -22,9 +22,8 @@ exports.index = function(req, res) {
 
 //con BBDD
 //get /quizes/question
-console.log('models')
 exports.show = function (req, res){
-	models.Quiz.findById(req.params.quizId).then(function(quiz) {
+	models.Quiz.find(req.params.quizId).then(function(quiz) {
 		res.render('quizes/show', { quiz: quiz});
 	})
 };
