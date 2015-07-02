@@ -4,13 +4,18 @@
   <body>
   
 <div style="text-align:center;">
-
 			<% var i; for(i=0; i < quizes.length; i++) { %>
-			<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
+			<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %><br></a></td></tr>
 			<% } %>
-
-			
 			</div>
+			
+<form method="get" action="/quizes">
+    <input type="text" name="search" value="Buscar pregunta"/>
+    <input type="submit" value="Buscar">
+    </form>			
+			
+			
+			
 
   </body>
 </html>
