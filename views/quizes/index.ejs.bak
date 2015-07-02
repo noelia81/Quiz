@@ -5,8 +5,6 @@
   
 <div style="text-align:center;">
 
-      <table border="1" style="margin: 0 auto;">
-
 			<% var i; for(i=0; i < quizes.length; i++) { %>
 			<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
 			<% } %>
