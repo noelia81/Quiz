@@ -7,6 +7,10 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Quiz' });
 });
 
+// Autoload de comandos con :quizId
+
+router.param('quizId', quizController.load); //autoload  :quizId
+
 
 //Antes de la BBDD
 //router.get('/quizes/question', quizController.question);
