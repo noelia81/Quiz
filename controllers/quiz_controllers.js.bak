@@ -108,9 +108,9 @@ exports.edit = function (req, res) {
 
 
 // PUT /quizes/:Id
-exports.update = function(req,res){
+exports.update = function(req, res){
 		req.quiz.pregunta = req.body.quiz.pregunta;
-		req.quiz.respuesta = req.body.respuesta;
+		req.quiz.respuesta = req.body.quiz.respuesta;
 		
 		req.quiz
   .validate()

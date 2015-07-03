@@ -101,6 +101,7 @@ quiz // save: guarda en DB campos pregunta y respuesta de quiz
 }
 };
 
+// GET /quizes/:Id/edit
 exports.edit = function (req, res) {
 	var quiz = req.quiz;
 	res.render('quizes/edit', {quiz: quiz, errors: [] });
