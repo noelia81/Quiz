@@ -125,7 +125,7 @@ exports.update = function(req, res){
         .then( function(){ res.redirect('/quizes');});
       }     // Redirección HTTP a lista de preguntas (URL relativo)
     }
-  );
+  )catch(function(error){next(error)});
 };
 
 
