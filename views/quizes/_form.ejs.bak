@@ -21,7 +21,7 @@
     <option value="ciencia" <% if (quiz.tema === 'ciencia') { %>selected<% } %>>
       Ciencia
     </option>
-    <option value="tecnolog&iacutea" <% if (quiz.tema === 'tecnolog&iacutea') { %>selected<% } %>>
+    <option value="tecnologia" <% if (quiz.tema === 'tecnologia') { %>selected<% } %>>
       Tecnolog&iacutea
     </option>
   </select>
