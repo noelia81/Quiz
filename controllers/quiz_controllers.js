@@ -78,7 +78,7 @@ exports.answer = function(req, res){
 //GET /quizes/new
 exports.new = function (req, res) {
 	var quiz = models.Quiz.build ( // crea objeto quiz
-	{pregunta: "Pregunta", respuesta: "Respuesta"}
+	{pregunta: "Pregunta", respuesta: "Respuesta", tema: "Tema"}
 	);
 	res.render('quizes/new', {quiz: quiz, errors: [] });
 };
@@ -96,24 +96,13 @@ var quiz = models.Quiz.build( req.body.quiz );
         res.render('quizes/new', {quiz: quiz, errors: err.errors});
       } else {
         quiz // save: guarda en DB campos pregunta y respuesta de quiz
-        .save({fields: ["pregunta", "respuesta"]})
+        .save({fields: ["pregunta", "respuesta", "tema"]})
         .then( function(){ res.redirect('/quizes')}) 
       }      // res.redirect: Redirección HTTP a lista de preguntas
     }
   ).catch(function(error){next(error)});
 };
-//var errors = quiz.validate();//ya qe el objeto errors no tiene then(
-//if (errors)
-//{
-//var i=0; var errores=new Array();//se convierte en [] con la propiedad message por compatibilida con layout
-//for (var prop in errors) errores[i++]={message: errors[prop]};	
-//res.render('quizes/new', {quiz: quiz, errors: errores});
-//} else {
-//quiz // save: guarda en DB campos pregunta y respuesta de quiz
-//.save({fields: ["pregunta", "respuesta"]})
-//.then( function(){ res.redirect('/quizes')}) ;
-//}
-//};
+
 
 // GET /quizes/:Id/edit
 exports.edit = function (req, res) {
@@ -135,7 +124,7 @@ exports.update = function(req, res){
         res.render('quizes/edit', {quiz: req.quiz, errors: err.errors});
       } else {
         req.quiz     // save: guarda campos pregunta y respuesta en DB
-        .save( {fields: ["pregunta", "respuesta"]})
+        .save( {fields: ["pregunta", "respuesta", "tema]})
         .then( function(){ res.redirect('/quizes');});
       }     // Redirección HTTP a lista de preguntas (URL relativo)
     }
