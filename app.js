@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var partials = require ('express-partials');
 var methodOverride = require ('method-override');
-var session = require ('express-session');
+var session = require('express-session');
 
 var routes = require('./routes/index');
 //var users = require('./routes/users');
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Helpers dinamicos:
 app.use(function(req, res, next) {
 	//guardar path en session.redir para despues de login
-	if(!req.path.match(/\login|\/logout/)){
+	if(!req.path.match(/\/login|\/logout/)){
 		req.session.redir = req.path;
 	}
 	//hacer visible req.session en las vistas
