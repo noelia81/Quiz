@@ -8,7 +8,7 @@ exports.new = function (req, res) {
 
 
 //POST /login  --Crear la sesion
-exposts.create = function (req, res) {
+exports.create = function (req, res) {
 	var login = req.body.login;
 	var password = req.body.password;
 	
