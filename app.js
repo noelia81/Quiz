@@ -29,10 +29,6 @@ app.use(session());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-app.use('/', routes);
-//app.use('/users', users);
-
 // Helpers dinámicos
 app.use(function(req, res, next){
 
@@ -45,6 +41,11 @@ req.session.redir = req.path;
 res.locals.session = req.session;
 next();
 });
+
+app.use('/', routes);
+//app.use('/users', users);
+
+
 
 
 // catch 404 and forward to error handler
