@@ -21,10 +21,8 @@
 			</tr>	
 			<% } %>
 			<%if(session.user){%>
-			<br><br>
 			<a href="/quizes/new"><button type="button">Crear pregunta</button></a>
 			<%}%>
-			<br><br>
 <form method="get" action="/quizes">
 	<input type="text"  name="search" value="Buscar pregunta" />
 	<input type="submit" value="Buscar" />
