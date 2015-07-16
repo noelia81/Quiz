@@ -17,7 +17,7 @@
 	</div>
 	
 	<div class="actions">
-		<input name="commit" type="submit" value="login" />
+		<input name="commit" type="submit" value="Login" />
 	</div>
 	
 </form>
