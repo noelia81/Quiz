@@ -1,3 +1,5 @@
+var misEstadisticas = require ('../app.js');
+
 //MW de utorización de accesos HTTP restringidos
 exports.loginRequired = function (req, res, next){
 	if (req.session.user){
