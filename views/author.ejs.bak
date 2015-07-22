@@ -1,2 +1,2 @@
 <p>Autor: <%= autora %> <p>
-<img src="<%= foto %>" alt="Autor" height=150px>
+<img src="<%= foto %>" alt="Autora" height=150px>
