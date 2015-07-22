@@ -156,5 +156,5 @@ exports.destroy = function(req, res) {
 
 exports.author = function (req, res){
 
-res.render('author', {autora: 'Noelia Ramirez'});
+res.render('author', {autora: 'Noelia Ramirez', foto:'/images/noe.jpg', errors: []});
 };

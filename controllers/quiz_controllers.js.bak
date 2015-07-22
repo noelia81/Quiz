@@ -154,7 +154,7 @@ exports.destroy = function(req, res) {
 
 
 
-//Exports.author = function (req, res){
+exports.author = function (req, res){
 
-//res.render('author', {autora: 'Noelia Ramirez'});
-//};
+res.render('author', {autora: 'Noelia Ramirez', foto:'/images/foto.png', errors: []});
+};
