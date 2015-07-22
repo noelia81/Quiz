@@ -13,8 +13,20 @@ var routes = require('./routes/index');
 
 var app = express();
 
+
+// variables estadisticas
+var contAccesosEstadisticas = 0;
+var contAccesosLogin = 0;
+var contAciertos = 0;
+var contErrores = 0;
+exports.contAccesosEstadisticas=contAccesosEstadisticas;
+exports.contAccesosLogin=contAccesosLogin;
+exports.contAciertos=contAciertos;
+exports.contErrores=contErrores;
+
+
 // time our session
-var timeOutSession= (2*60*1000); // 2 minutos
+var dosMin= (2*60*1000); // 2 minutos
 
 
 // view engine setup
@@ -33,13 +45,13 @@ app.use(session());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// timeout session
+// timeout
 app.use(function(req, res, next) {
     if (req.session.user) {
-      if (Date.now() - req.session.user.timeOutSession > timeOutSession) {
+      if (Date.now() - req.session.user.dosMin > dosMin) {
         delete req.session.user;
       } else {
-        req.session.user.timeOutSession = Date.now();
+        req.session.user.dosMin = Date.now();
     }
   }
   next();

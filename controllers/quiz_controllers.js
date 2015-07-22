@@ -1,4 +1,5 @@
 var models = require('../models/models.js');
+var misEstadisticas = require ('../app.js');
 
 //Autoload - factoriza el código si la ruta incluye :quizId
 
@@ -69,12 +70,23 @@ exports.show = function (req, res){
 
 //con BBDD
 //GET /quizes/answer
-exports.answer = function(req, res){
-	var resultado = 'Incorrecto';
-	 if(req.query.respuesta === req.quiz.respuesta){
-		resultado = 'Correcto';
-	}
-		res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado, errors: [] });
+// GET /quizes/:id/answer
+exports.answer = function(req, res) {
+  var resultado = 'Incorrecto';
+  if (req.query.respuesta === req.quiz.respuesta) {
+    resultado = 'Correcto';
+    misEstadisticas.contAciertos+=1;
+  }
+  else {
+    misEstadisticas.contErrores+=1;
+  } 
+  res.render(
+    'quizes/answer', 
+    { quiz: req.quiz, 
+      respuesta: resultado, 
+      errors: []
+    }
+  );
 };
 
 
