@@ -45,6 +45,6 @@ router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish',
 //estadisticas
 router.get('/stadistics', stadisticsController.stadistics);																	
 
-//router.get('/author', quizController.author);
+router.get('/author', quizController.author);
 
 module.exports = router;
