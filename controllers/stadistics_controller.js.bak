@@ -1,5 +1,5 @@
 var misEstadisticas = require ('../app.js');
-var models = require('../models/models.js');
+var models = require('../models/model.js');
 
 var estadisticas={"Num. de Preguntas":0,
                   "Num. de Comentarios":0,
