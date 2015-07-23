@@ -10,7 +10,7 @@ exports.load = function(req, res, next, commentId){
 		 if(comment){
 		 	   req.comment = comment;
 		 	   next();
-		 }else{next(new Error('No exsite commentId=' + commentId))}
+		 }else{next(new Error('No existe commentId=' + commentId))}
 		}
 	).catch(function(error){next(error)});
 };
@@ -40,7 +40,7 @@ exports.create = function (req, res) {
 };
 
 // GET /quizes/:quizId/comments/:commentId/publish
-exports.publish = function (req, res) {
+exports.publish = function(req, res) {
 	req.comment.publicado = true;
 	
 	req.comment.save( {fields: ["publicado"]})
